@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
+import "../css/NavBar.css"
+import "bootswatch/dist/brite/bootstrap.min.css";
 
 
 function NavBar() {
     return (
-        <nav className="navbar">
-            <div className="navbar-links">
+        <nav className="navbar navbar-expand-lg bg-primary">
+            <div className="container-fluid">
                 <Link to="/" className="nav-link">Home</Link>
                 <Link to="/animals" className="nav-link">Animals</Link>
                 <Link to="/crops" className="nav-link">Crops</Link>
