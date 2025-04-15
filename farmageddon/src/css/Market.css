@@ -1,0 +1,18 @@
+.marketHeading {
+    margin: 0;
+    border-bottom: 3px solid black;
+}
+
+.market {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding: 10px;
+}
+
+.marketSpan {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
