@@ -3,7 +3,7 @@
     border-bottom: 3px solid black;
 }
 
-.market {
+.marketTop {
     display: flex;
     justify-content: center;
     position: relative;
@@ -15,4 +15,16 @@
     right: 10px;
     top: 50%;
     transform: translateY(-50%);
+}
+
+.buy {
+    height: 200px;
+    width: 200px;
+    border: 2px solid black;
+}
+
+.sell {
+    height: 200px;
+    width: 200px;
+    border: 2px solid blue;
 }
