@@ -1,6 +1,8 @@
 .marketHeading {
     margin: 0;
-    border-bottom: 3px solid black;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #ffc700;
 }
 
 .marketTop {
@@ -18,13 +20,20 @@
 }
 
 .buy {
-    height: 200px;
-    width: 200px;
+    height: 500px;
+    width: 50%;
+    float: left;
     border: 2px solid black;
 }
 
 .sell {
-    height: 200px;
-    width: 200px;
-    border: 2px solid blue;
+    height: 500px;
+    width: 50%;
+    float: left;
+    border: 2px solid black;
+}
+
+.buyHeader, .sellHeader {
+    text-align: center;
+    border-bottom: 2px solid black;
 }

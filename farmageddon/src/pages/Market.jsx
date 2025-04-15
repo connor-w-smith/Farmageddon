@@ -8,10 +8,10 @@ function Market() {
                 <em><strong><span className="marketSpan">---'s XP: </span></strong></em>
             </div>
             <div className="buy">
-                
+                <h3 className="buyHeader">Buy</h3>
             </div>
             <div className="sell">
-
+                <h3 className="sellHeader">Sell</h3>
             </div>
         </div>
     )
