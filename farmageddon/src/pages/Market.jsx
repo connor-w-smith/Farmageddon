@@ -5,7 +5,7 @@ function Market() {
 
     const crops = ["Carrot", "Tomato", "Corn", "Wheat", "Cucumber", "Potato", "Green Pepper", "Red Pepper", "Japepeno", "Tobacco", "Soy Bean"];
     const animals = ["Sheep", "Cow", "Pig", "Goat", "Chicken", "Duck", "Horse", "Bull", "Donkey"];
-    const sellers = ["Estatic Eric", "Crazy Connor", "Old Man Jenkins", "Sweet Susie", "Noisy Nancy", "Redneck Rick", "Dirty Dustin", "Cowboy Cole", "Tiny Tina"];
+    const sellers = ["Estatic Eric", "Crazy Connor", "Old Man Jenkins", "Sweet Susie", "Noisy Nancy", "Redneck Rick", "Dirty Dustin", "Cowboy Cole", "Tiny Tina", "Chubby Chuck"];
 
     const items = [...animals, ...crops];
 
@@ -16,7 +16,7 @@ function Market() {
         const item = getRandomItem(items);
         const quantity = getRandomQuantity();
         const seller = getRandomItem(sellers);
-        return `${item} x${quantity} sold by ${seller}`;
+        return `${items[item]} x${quantity} sold by ${sellers[seller]}`;
     };
 
     const [saleInfo, setSaleInfo] = useState(generateRandomSale());
