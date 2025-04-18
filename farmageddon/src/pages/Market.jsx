@@ -19,12 +19,20 @@ function Market() {
         return `${items[item]} x${quantity} sold by ${sellers[seller]}`;
     };
 
-    const [saleInfo, setSaleInfo] = useState(generateRandomSale());
+    const generateSaleList = (i = 7) => {
+        const sales = [];
+        for(let j = 0; j < i; j++) {
+            sales.push(generateRandomSale());
+        }
+        return sales;
+    };
+
+    const [saleInfo, setSaleInfo] = useState(generateSaleList());
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setSaleInfo(generateRandomSale());
-        }, 3000);
+            setSaleInfo(generateSaleList());
+        }, 1800000);
 
         return () => clearInterval(interval);
     }, []);
@@ -37,7 +45,12 @@ function Market() {
             </div>
             <div className="buy">
                 <h3 className="buyHeader">Buy</h3>
-                <p className="text-info-emphasis">{saleInfo}</p>
+                {/* <p className="text-info-emphasis">{saleInfo}</p> */}
+                <ul className="text-info-emphasis">
+                    {saleInfo.map((sale, index) => (
+                        <li key={index}>{sale}</li>
+                    ))}
+                </ul>
             </div>
             <div className="sell">
                 <h3 className="sellHeader">Sell</h3>
