@@ -37,3 +37,7 @@
     text-align: center;
     border-bottom: 2px solid black;
 }
+
+.text-info-emphasis {
+   line-height: 4.0;
+}

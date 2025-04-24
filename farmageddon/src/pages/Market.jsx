@@ -27,12 +27,22 @@ function Market() {
         return sales;
     };
 
-    const [saleInfo, setSaleInfo] = useState(generateSaleList());
+    const getInitialSales = () => {
+        const save = localStorage.getItem("marketSales");
+        return save ? JSON.parse(save) : generateSaleList();
+    }
+
+    const [saleInfo, setSaleInfo] = useState(getInitialSales());
+
+    useEffect( () => {
+        localStorage.setItem("marketSales", JSON.stringify(saleInfo));
+    }, [saleInfo]);
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setSaleInfo(generateSaleList());
-        }, 1800000);
+            const newSales = generateSaleList();
+            setSaleInfo(newSales);
+        }, 18000000);
 
         return () => clearInterval(interval);
     }, []);
@@ -48,7 +58,7 @@ function Market() {
                 {/* <p className="text-info-emphasis">{saleInfo}</p> */}
                 <ul className="text-info-emphasis">
                     {saleInfo.map((sale, index) => (
-                        <li key={index}>{sale}</li>
+                        <li key={index} className="buyList">{sale}</li>
                     ))}
                 </ul>
             </div>
