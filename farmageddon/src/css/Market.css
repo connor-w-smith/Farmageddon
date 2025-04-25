@@ -42,11 +42,17 @@
    line-height: 4.0;
 }
 
+.buyList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12p 16px;
+}
+
 .buyBtn {
     border: 1px solid black;
     background-color: #F56565;
     color: white;
     border-radius: 5px;
     line-height: normal;
-    margin-left: 50px;
 }
