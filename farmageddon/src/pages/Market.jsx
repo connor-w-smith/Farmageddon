@@ -55,10 +55,11 @@ function Market() {
             </div>
             <div className="buy">
                 <h3 className="buyHeader">Buy</h3>
-                {/* <p className="text-info-emphasis">{saleInfo}</p> */}
                 <ul className="text-info-emphasis">
                     {saleInfo.map((sale, index) => (
-                        <li key={index} className="buyList">{sale}</li>
+                        <li key={index} className="buyList">{sale}
+                         <button type="button" className="buyBtn">Buy Now</button>
+                        </li>
                     ))}
                 </ul>
             </div>
